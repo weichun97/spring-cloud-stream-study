@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: stream-helloworld
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: aaa-topic
+        output:
+          destination: aaa-topic
+server:
+  port: 8080
