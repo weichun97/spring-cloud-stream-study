@@ -1,3 +1,4 @@
+
 spring:
   application:
     name: stream-helloworld
@@ -5,8 +6,13 @@ spring:
     stream:
       bindings:
         input:
-          destination: aaa-topic
+          destination: message
         output:
-          destination: aaa-topic
+          destination: message
+  rabbitmq:
+    host: localhost
+    username: admin
+    password: admin
+    virtual-host: /fgoc
 server:
   port: 8080

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: stream-error-handler
+  cloud:
+    stream:
+      bindings:
+        input:
+          group: stream-error-handler
+          destination: aaa-topic
+        output:
+          group: stream-error-handler
+          destination: aaa-topic
+server:
+  port: 8080

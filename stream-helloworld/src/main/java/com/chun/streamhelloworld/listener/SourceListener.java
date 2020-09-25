@@ -1,7 +1,8 @@
 package com.chun.streamhelloworld.listener;
 
-import com.chun.streamhelloworld.Source;
+import com.chun.streamhelloworld.message.Person;
 import org.springframework.cloud.stream.annotation.StreamListener;
+import org.springframework.cloud.stream.messaging.Sink;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,8 +12,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class SourceListener {
 
-    @StreamListener(Source.INPUT)
-    public void receive(String payload){
-        System.out.println(payload);
+    @StreamListener(Sink.INPUT)
+    public void receive(Person person){
+        System.out.println(person);
     }
 }
